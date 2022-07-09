@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="jwq.kodi.nfm" version="0.0.1" name="nfm" provider-name="JerwuQu">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="nfm.py">
+        <provides>image video audio</provides>
+    </extension>
+</addon>

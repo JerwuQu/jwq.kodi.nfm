@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+    <category id="general" label="30000" help="">
+        <setting id="base_url" type="text" label="30001" default="" />
+    </category>
+</settings>
