@@ -23,13 +23,13 @@ def route(param):
         is_dir = entry['type'] == 'directory'
 
         if is_dir:
-            endslash = '/' if is_dir else ''
-            item_url = f'{addon_url}?uri={quote(join(uri, name + endslash))}'
+            item_url = f'{addon_url}?uri={quote(join(uri, name))}%2F'
             items.append((item_url, item, is_dir))
         else:
+            item_url = join(base_url, uri, name)
             item.setInfo("video", {"title": name})
             item.setProperty("IsPlayable", "true")
-            items.append((join(base_url, uri, name), item, is_dir))
+            items.append((item_url, item, is_dir))
 
     addDirectoryItems(addon_handle, items, totalItems=len(items))
     endOfDirectory(addon_handle)
